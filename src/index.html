@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drax's Tetris Destroyer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <div class="game-wrapper" id="game-wrapper">
+        <header>
+            <h1>Drax's Tetris Destroyer</h1>
+        </header>
+        
+        <main class="game-layout">
+            <aside class="panel left-panel">
+                <div class="stats-box">
+                    <h2>HUD Status</h2>
+                    <div class="stat-item">
+                        <span>Score:</span>
+                        <p id="score">0</p>
+                    </div>
+                    <div class="stat-item">
+                        <span>High Score:</span>
+                        <p id="high-score">0</p>
+                    </div>
+                    <div class="stat-item">
+                        <span>Level:</span>
+                        <p id="level">1</p>
+                    </div>
+                </div>
+                <div class="combo-box">
+                    <h2>Rage Combo</h2>
+                    <p id="combo-indicator">0x</p>
+                </div>
+                <div class="stats-box leaderboard-box">
+                    <h2>Galactic Hall of Fame</h2>
+                    <ol id="leaderboard-list"></ol>
+                </div>
+            </aside>
+            
+            <section class="board-container">
+                <div id="board" class="board"></div>
+                <div id="quote-container" class="quote-container"></div>
+                <div id="overlay" class="overlay show">
+                    <h2 id="overlay-title">Prepare to Destroy</h2>
+                    <button id="overlay-btn" class="btn">Engage</button>
+                </div>
+            </section>
+            
+            <aside class="panel right-panel">
+                <div class="next-piece-box">
+                    <h2>Weapon Next</h2>
+                    <div id="next-piece-grid" class="next-piece-grid"></div>
+                </div>
+                
+                <div class="controls-info">
+                    <h2>Controls</h2>
+                    <ul>
+                        <li><kbd>←</kbd> <kbd>→</kbd> Move</li>
+                        <li><kbd>↑</kbd> Rotate</li>
+                        <li><kbd>↓</kbd> Soft Drop</li>
+                        <li><kbd>Space</kbd> Smash! (Hard Drop)</li>
+                        <li><kbd>P</kbd> Pause</li>
+                    </ul>
+                </div>
+            </aside>
+        </main>
+    </div>
+    
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

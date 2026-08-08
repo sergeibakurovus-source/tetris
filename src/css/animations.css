@@ -1,0 +1,59 @@
+/* Screen Shake */
+.shake-sm {
+    animation: shakeSm 0.3s cubic-bezier(.36,.07,.19,.97) both;
+}
+.shake-lg {
+    animation: shakeLg 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shakeSm {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(2px, 0, 0); }
+    30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+    40%, 60% { transform: translate3d(4px, 0, 0); }
+}
+
+@keyframes shakeLg {
+    10%, 90% { transform: translate3d(-2px, -2px, 0); }
+    20%, 80% { transform: translate3d(4px, 4px, 0); }
+    30%, 50%, 70% { transform: translate3d(-8px, -4px, 0); }
+    40%, 60% { transform: translate3d(8px, 4px, 0); }
+}
+
+/* Quote Banner Pop */
+@keyframes quoteBannerPop {
+    0% { transform: scale(0.5) translateY(50px); opacity: 0; }
+    15% { transform: scale(1.1) translateY(0); opacity: 1; }
+    30% { transform: scale(1) translateY(0); opacity: 1; }
+    80% { transform: scale(1) translateY(0); opacity: 1; }
+    100% { transform: scale(0.8) translateY(-30px); opacity: 0; }
+}
+
+/* Carmine Neon Breath */
+.neonBreath {
+    animation: neonBreathAnim 2s infinite alternate;
+}
+
+@keyframes neonBreathAnim {
+    0% { box-shadow: 0 0 10px var(--color-carmine), inset 0 0 10px var(--color-carmine); border-color: var(--color-carmine); }
+    100% { box-shadow: 0 0 30px var(--color-carmine), inset 0 0 30px var(--color-carmine); border-color: #ff4d6d; }
+}
+
+/* Lock and Clear Overrides */
+.lock-anim {
+    animation: lockPop 0.2s ease-out forwards;
+}
+@keyframes lockPop {
+    0% { transform: scale(1); filter: brightness(1); }
+    50% { transform: scale(1.1); filter: brightness(2) drop-shadow(0 0 5px white); }
+    100% { transform: scale(1); filter: brightness(1); }
+}
+
+.clear-anim {
+    animation: clearFlash 0.4s ease-out forwards;
+}
+@keyframes clearFlash {
+    0% { background-color: var(--color-carmine); transform: scale(1); opacity: 1; }
+    50% { background-color: white; transform: scale(0.5) rotate(15deg); opacity: 0.8; box-shadow: 0 0 20px var(--color-carmine); }
+    100% { transform: scale(0); opacity: 0; }
+}
